@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flowmin Technology's approach to compliance, data protection, infrastructure security, and regulatory alignment for payment gateway and fintech solutions.">
+    <meta name="keywords" content="payment gateway security, fintech compliance India, data protection payments, API security, PCI DSS compliance">
+    <meta name="author" content="Flowmin Technology">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Compliance & Security - Flowmin Technology">
+    <meta property="og:description" content="Our approach to security, compliance, and data protection in payment infrastructure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flowmintechnology.in/compliance">
+    <link rel="canonical" href="https://flowmintechnology.in/compliance">
+    <title>Compliance & Security - Payment Infrastructure | Flowmin Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --white: #ffffff;
+            --accent: #8b5cf6;
+            --orange: #f97316;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            transition: all 0.3s;
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Compliance Intro */
+        .compliance-intro {
+            padding: 80px 0 40px;
+        }
+
+        .compliance-intro-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .compliance-intro h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .compliance-intro p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Security Sections */
+        .security-section {
+            padding: 60px 0;
+        }
+
+        .security-section:nth-child(even) {
+            background: var(--light);
+        }
+
+        .security-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .security-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .security-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .security-header h2 {
+            font-size: 2rem;
+            color: var(--dark);
+        }
+
+        .security-content p {
+            font-size: 1.05rem;
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .security-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: all 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .feature-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Disclaimer Section */
+        .disclaimer-section {
+            background: #fef3c7;
+            border-left: 4px solid var(--orange);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 8px;
+        }
+
+        .disclaimer-section h3 {
+            color: var(--orange);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .disclaimer-section p {
+            color: var(--dark);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Standards Grid */
+        .standards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .standard-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .standard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .standard-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--secondary), #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+
+        .standard-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .standard-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .final-cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .final-cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 0.75rem 1.5rem;
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid var(--light);
+            }
+
+            .security-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .security-features {
+                grid-template-columns: 1fr;
+            }
+
+            .standards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Flowmin Technology</div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <a href="Contact.html" class="cta-btn">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container page-header-content">
+                <h1>Compliance & Security</h1>
+                <p>Our approach to data protection, infrastructure security, and regulatory alignment in payment technology.</p>
+            </div>
+        </section>
+
+        <!-- Compliance Overview -->
+        <section class="compliance-intro">
+            <div class="container compliance-intro-content animate-on-scroll">
+                <h2>Our Commitment to Compliance</h2>
+                <p>Payment infrastructure operates in a regulated environment, and we take compliance seriously. We align our systems and practices with standard industry requirements for payments and fintech operations in India and internationally. Our infrastructure is built with compliance in mind from the ground up, not as an afterthought.</p>
+                <p>We work with compliant infrastructure partners, banking partners, and payment networks that meet regulatory standards. While we provide the technology infrastructure, we stay current with evolving requirements from regulatory bodies and ensure our platform supports compliant operations for our clients.</p>
+            </div>
+        </section>
+
+        <!-- Data Protection -->
+        <section class="security-section">
+            <div class="container security-content animate-on-scroll">
+                <div class="security-header">
+                    <div class="security-icon">🔒</div>
+                    <div>
+                        <h2>Data Protection & Privacy</h2>
+                    </div>
+                </div>
+                
+                <p>Protecting sensitive financial data is central to everything we build. We implement multiple layers of security to ensure that transaction data, customer information, and business data remain secure throughout its lifecycle.</p>
+                
+                <div class="security-features">
+                    <div class="feature-item">
+                        <h4>Encryption in Transit</h4>
+                        <p>All data transmitted between clients, our servers, and banking partners uses industry-standard HTTPS/TLS encryption to prevent interception or tampering during transmission.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Encryption at Rest</h4>
+                        <p>Sensitive data stored in our databases is encrypted using strong encryption algorithms. This includes payment credentials, transaction records, and personally identifiable information.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Access Control</h4>
+                        <p>Role-based access control ensures that only authorized personnel can access specific data and systems. Each user has permissions appropriate to their role and responsibilities.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Restricted Dashboards</h4>
+                        <p>Client dashboards and admin panels are secured with multi-factor authentication options, session management, and IP-based restrictions where applicable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infrastructure Security -->
+        <section class="security-section">
+            <div class="container security-content animate-on-scroll">
+                <div class="security-header">
+                    <div class="security-icon">🏢</div>
+                    <div>
+                        <h2>Infrastructure Security</h2>
+                    </div>
+                </div>
+                
+                <p>Our infrastructure is designed for reliability, security, and uptime. We use trusted data center providers with appropriate certifications and security measures to host our production systems.</p>
+                
+                <div class="security-features">
+                    <div class="feature-item">
+                        <h4>Data Center Standards</h4>
+                        <p>We host our systems in data centers that meet industry standards for physical security, power redundancy, climate control, and network connectivity.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Backup & Recovery</h4>
+                        <p>Regular automated backups of critical data and systems. We maintain backup retention policies and test recovery procedures to ensure business continuity.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Monitoring & Alerts</h4>
+                        <p>24/7 system monitoring for uptime, performance, and security events. Automated alerts notify our team of any issues requiring immediate attention.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Network Security</h4>
+                        <p>Firewalls, intrusion detection systems, and network segmentation protect our infrastructure from unauthorized access and potential threats.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application & API Security -->
+        <section class="security-section">
+            <div class="container security-content animate-on-scroll">
+                <div class="security-header">
+                    <div class="security-icon">⚙️</div>
+                    <div>
+                        <h2>Application & API Security</h2>
+                    </div>
+                </div>
+                
+                <p>Our APIs and applications follow security best practices to protect against common vulnerabilities and ensure safe integration with client systems.</p>
+                
+                <div class="security-features">
+                    <div class="feature-item">
+                        <h4>Secure API Keys</h4>
+                        <p>API authentication uses secure key pairs and token-based authentication. Keys can be rotated, and access can be revoked immediately if compromised.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>IP Whitelisting</h4>
+                        <p>Clients can restrict API access to specific IP addresses or ranges, adding an additional layer of security for production environments.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Rate Limiting</h4>
+                        <p>API rate limits prevent abuse, protect system resources, and ensure fair usage across all clients. Limits are configurable based on client needs.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Comprehensive Logging</h4>
+                        <p>All API requests, transactions, and system events are logged with timestamps and metadata for audit trails, troubleshooting, and compliance reporting.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Input Validation</h4>
+                        <p>All inputs to our systems are validated and sanitized to prevent injection attacks, cross-site scripting, and other common security vulnerabilities.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Secure Development</h4>
+                        <p>Our development process includes code reviews, security testing, and following secure coding guidelines to minimize vulnerabilities before deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KYC & Transaction Monitoring -->
+        <section class="security-section">
+            <div class="container security-content animate-on-scroll">
+                <div class="security-header">
+                    <div class="security-icon">👤</div>
+                    <div>
+                        <h2>KYC & Transaction Monitoring</h2>
+                    </div>
+                </div>
+                
+                <p>We provide infrastructure that supports compliant customer onboarding and transaction oversight, though the responsibility for actual KYC compliance and monitoring lies with the client based on their regulatory obligations.</p>
+                
+                <div class="security-features">
+                    <div class="feature-item">
+                        <h4>KYC Support Infrastructure</h4>
+                        <p>Our systems can integrate with KYC verification services and support document collection workflows to help clients build compliant onboarding processes.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Transaction Records</h4>
+                        <p>Complete transaction logs with all relevant data points, making it easier for clients to maintain audit trails and respond to compliance inquiries.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Monitoring Tools</h4>
+                        <p>Dashboards and reporting tools that allow clients to monitor transaction patterns, flagging mechanisms for unusual activity, and export capabilities for compliance teams.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <h4>Data Retention</h4>
+                        <p>Configurable data retention policies to meet regulatory requirements for record-keeping while respecting data privacy obligations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industry Standards -->
+        <section class="security-section" style="background: var(--light);">
+            <div class="container animate-on-scroll">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 style="font-size: 2.5rem; color: var(--dark); margin-bottom: 1rem;">Industry Alignment</h2>
+                    <p style="font-size: 1.1rem; color: var(--gray); max-width: 800px; margin: 0 auto;">We align our practices with recognized industry standards and work with partners who maintain appropriate certifications and compliance frameworks.</p>
+                </div>
+                
+                <div class="standards-grid">
+                    <div class="standard-card">
+                        <div class="standard-icon">🛡️</div>
+                        <h4>Payment Security Standards</h4>
+                        <p>We follow industry best practices for payment data handling and work with PCI-compliant infrastructure partners.</p>
+                    </div>
+                    
+                    <div class="standard-card">
+                        <div class="standard-icon">🏦</div>
+                        <h4>Banking Partner Standards</h4>
+                        <p>Our banking and payment network integrations are with RBI-regulated and NPCI-certified entities.</p>
+                    </div>
+                    
+                    <div class="standard-card">
+                        <div class="standard-icon">📋</div>
+                        <h4>Data Privacy Practices</h4>
+                        <p>We implement data handling practices aligned with data protection principles and privacy requirements.</p>
+                    </div>
+                    
+                    <div class="standard-card">
+                        <div class="standard-icon">🔐</div>
+                        <h4>Security Frameworks</h4>
+                        <p>Our security approach follows recognized frameworks for access control, encryption, and incident response.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsibility Disclaimer -->
+        <section class="security-section">
+            <div class="container animate-on-scroll">
+                <div class="disclaimer-section">
+                    <h3>⚠️ Client Responsibility & Regulatory Compliance</h3>
+                    <p><strong>Important:</strong> While we provide secure and compliant infrastructure, each client is ultimately responsible for obtaining and maintaining their own regulatory licenses, approvals, and compliance requirements as per their jurisdiction and business model.</p>
+                    <p>This includes but is not limited to: payment aggregator licenses, NBFC registrations, RBI approvals, state-level permissions, GST compliance, and any other regulatory requirements specific to your business operations and geography.</p>
+                    <p>Clients are responsible for ensuring their use of our platform complies with all applicable laws and regulations in their operating jurisdictions. We recommend consulting with legal and compliance advisors familiar with your specific regulatory environment.</p>
+                    <p>Our platform provides the technical infrastructure and tools to support compliant operations, but we do not provide legal advice or assume responsibility for our clients' regulatory compliance obligations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta-section" id="contact">
+            <div class="container">
+                <h2 class="animate-on-scroll">Questions About Our Security Practices?</h2>
+                <p class="animate-on-scroll">We're transparent about our approach to security and compliance. If you have specific questions or need detailed information for your security review, we're happy to discuss.</p>
+                
+                <div class="cta-buttons animate-on-scroll">
+                    <a href="mailto:info@flowmintechnology.in" class="cta-btn">Contact Our Team</a>
+                    <a href="solutions.html" class="cta-btn cta-secondary" style="background: transparent; border: 2px solid white; color: white;">Explore Solutions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Flowmin Technology</h4>
+                    <p>Leading payment gateway and fintech solution provider serving businesses across India and globally.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html#payment-gateway">Payment Gateway</a></li>
+                        <li><a href="solutions.html#white-label">White-Label PG</a></li>
+                        <li><a href="solutions.html#aeps">AEPS Services</a></li>
+                        <li><a href="solutions.html#api">API Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="compliance.html">Compliance & Security</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/Legal/complince.html">Compliance & Security</a></li>
+                        <li><a href="/Legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/Legal/terms & conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                    <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@flowmintechnology.in</p>
+                    <p>Website: FlowminTechnology.in</p>
+                    <p>India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flowmin Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Parallax effect for page header
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.page-header');
+            if (header) {
+                header.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Hover effects for cards
+        document.querySelectorAll('.feature-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.borderLeftWidth = '6px';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.borderLeftWidth = '4px';
+            });
+        });
+    </script>
+</body>
+</html>

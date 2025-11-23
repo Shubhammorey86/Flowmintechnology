@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flowmin Technology offers white-label payment gateway solutions, AEPS API, payout APIs, and fintech software for businesses. Launch your payment platform with our proven infrastructure.">
+    <meta name="keywords" content="payment gateway solution, white label payment gateway, AEPS API provider, payout API solution, fintech white label software, fintech API provider, payment gateway India">
+    <meta name="author" content="Flowmin Technology">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Flowmin Technology - Payment Gateway & Fintech API Solutions">
+    <meta property="og:description" content="White-label payment gateway, AEPS services, payment APIs, and fintech software solutions for businesses across India and globally.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flowmintechnology.in/solutions">
+    <link rel="canonical" href="https://flowmintechnology.in/solutions">
+    <title>Solutions - Payment Gateway & Fintech API Services | Flowmin Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --white: #ffffff;
+            --accent: #8b5cf6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Solutions Intro */
+        .solutions-intro {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .solutions-intro h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .solutions-intro p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 60px 0;
+        }
+
+        .solution-section:nth-child(even) {
+            background: var(--light);
+        }
+
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .solution-content.reverse {
+            direction: rtl;
+        }
+
+        .solution-content.reverse > * {
+            direction: ltr;
+        }
+
+        .solution-text h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            animation: fadeInLeft 0.6s ease;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .solution-text p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .solution-features {
+            margin-bottom: 2rem;
+        }
+
+        .solution-features h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .solution-features ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .solution-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--dark);
+        }
+
+        .solution-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .solution-visual {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            animation: fadeInRight 0.6s ease;
+            position: relative;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .solution-visual::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .visual-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .visual-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .stat-item {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Buttons */
+        .solution-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* API Documentation Preview */
+        .api-preview {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        .api-preview code {
+            color: #10b981;
+        }
+
+        /* Use Cases Grid */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .use-case-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .use-case-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .final-cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .solution-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .solution-content.reverse {
+                direction: ltr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .solution-text h2 {
+                font-size: 1.8rem;
+            }
+
+            .visual-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Badges */
+        .feature-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Flowmin Technology</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="solutions.html" class="active">Solutions</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="about.html">about</a></li>
+            </ul>
+            <a href="contact." class="cta-btn">Book a Demo</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container page-header-content">
+                <h1>Fintech Solutions That Scale With Your Business</h1>
+                <p>Launch payment platforms, AEPS services, and fintech products faster with our proven infrastructure trusted by businesses across India and globally.</p>
+            </div>
+        </section>
+
+        <!-- Solutions Intro -->
+        <section class="solutions-intro">
+            <div class="container">
+                <h2>Ready Infrastructure for Modern Fintech</h2>
+                <p>Flowmin Technology helps fintech startups, payment companies, NBFCs, and resellers launch payment and banking-like products faster with compliant, ready-to-deploy infrastructure. Focus on your business growth while we handle the complex tech stack.</p>
+            </div>
+        </section>
+
+        <!-- Solution 1: Payment Gateway Solutions -->
+        <section class="solution-section">
+            <div class="container">
+                <div class="solution-content">
+                    <div class="solution-text">
+                        <h2>Payment Gateway Solutions</h2>
+                        <p>Accept payments seamlessly with our enterprise-grade payment gateway infrastructure. Built for scale, security, and reliability with multi-channel payment support and instant settlement capabilities.</p>
+                        
+                        <div class="solution-features">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Multi-bank routing and smart payment orchestration</li>
+                                <li>UPI, cards, net banking, wallets, and EMI support</li>
+                                <li>Real-time settlements with automated reconciliation</li>
+                                <li>Comprehensive merchant dashboard with analytics</li>
+                                <li>Transaction reports, refunds, and dispute management</li>
+                                <li>PCI-DSS compliant infrastructure with tokenization</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-features">
+                            <h3>Business Benefits</h3>
+                            <ul>
+                                <li>Go live in weeks instead of months</li>
+                                <li>Reduce development time and technical overhead</li>
+                                <li>Scale infrastructure as your transaction volume grows</li>
+                                <li>Focus on customer acquisition, not payment plumbing</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-cta">
+                            <a href="#contact" class="cta-btn">Request Solution Overview</a>
+                            <a href="#contact" class="cta-btn cta-secondary">View Documentation</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-visual">
+                        <div class="visual-icon">💳</div>
+                        <div class="visual-stats">
+                            <div class="stat-item">
+                                <h4>99.9%</h4>
+                                <p>Uptime SLA</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>15+</h4>
+                                <p>Payment Methods</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>&lt;2s</h4>
+                                <p>Response Time</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>24/7</h4>
+                                <p>Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution 2: White-label Payment Gateway -->
+        <section class="solution-section">
+            <div class="container">
+                <div class="solution-content reverse">
+                    <div class="solution-text">
+                        <h2>White-Label Payment Gateway Platform</h2>
+                        <p>Launch your own branded payment gateway business with complete infrastructure, merchant onboarding flows, and partner management capabilities. Everything you need to become a payment aggregator under your brand.</p>
+                        
+                        <div class="solution-features">
+                            <h3>What You Get</h3>
+                            <ul>
+                                <li>Fully branded merchant dashboard with your logo and colors</li>
+                                <li>Automated merchant onboarding and KYC workflows</li>
+                                <li>Real-time transaction monitoring and reconciliation</li>
+                                <li>Multi-level partner and reseller hierarchy support</li>
+                                <li>Commission management and payout automation</li>
+                                <li>Custom domain, SSL, and dedicated infrastructure</li>
+                                <li>Admin panel for complete platform control</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-features">
+                            <h3>Ideal For</h3>
+                            <div class="use-cases-grid">
+                                <div class="use-case-card">
+                                    <h4>Fintech Founders</h4>
+                                    <p>Launch your payment brand without building from scratch</p>
+                                </div>
+                                <div class="use-case-card">
+                                    <h4>Payment Aggregators</h4>
+                                    <p>Expand your payment business with ready infrastructure</p>
+                                </div>
+                                <div class="use-case-card">
+                                    <h4>SaaS Companies</h4>
+                                    <p>Add payment capabilities to your product offering</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="solution-cta">
+                            <a href="#contact" class="cta-btn">Talk to Our Solution Expert</a>
+                            <a href="#contact" class="cta-btn cta-secondary">See Demo</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-visual">
+                        <div class="visual-icon">🏷️</div>
+                        <h3 style="margin-bottom: 1rem;">Your Brand, Our Technology</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--gray);">Complete white-label solution with:</p>
+                        <span class="feature-badge">Custom Branding</span>
+                        <span class="feature-badge">Merchant Portal</span>
+                        <span class="feature-badge">Reseller Panel</span>
+                        <span class="feature-badge">API Access</span>
+                        <span class="feature-badge">Admin Dashboard</span>
+                        <span class="feature-badge">Webhooks</span>
+                        <span class="feature-badge">Analytics</span>
+                        <span class="feature-badge">Support Tools</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution 3: AEPS & Micro-Banking -->
+        <section class="solution-section">
+            <div class="container">
+                <div class="solution-content">
+                    <div class="solution-text">
+                        <h2>AEPS & Micro-Banking Services</h2>
+                        <p>Enable Aadhaar-based banking services for rural and semi-urban populations. Our AEPS solution helps you offer cash withdrawal, balance inquiry, and mini statements through authorized agents and retailers.</p>
+                        
+                        <div class="solution-features">
+                            <h3>AEPS Features</h3>
+                            <ul>
+                                <li>Cash withdrawal via Aadhaar authentication</li>
+                                <li>Balance inquiry for all major banks</li>
+                                <li>Mini statement generation in real-time</li>
+                                <li>Aadhaar Pay merchant transactions</li>
+                                <li>Built-in compliance with NPCI guidelines</li>
+                                <li>Automated reconciliation and settlement reports</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-features">
+                            <h3>Use Cases</h3>
+                            <ul>
+                                <li>Banking correspondent agents serving rural areas</li>
+                                <li>Kirana stores and retail outlets offering banking services</li>
+                                <li>Customer service points for financial inclusion</li>
+                                <li>Micro-ATM operators and payment banks</li>
+                                <li>NBFCs expanding branchless banking services</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-cta">
+                            <a href="#contact" class="cta-btn">Get AEPS API Access</a>
+                            <a href="#contact" class="cta-btn cta-secondary">Download Integration Guide</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-visual">
+                        <div class="visual-icon">🏦</div>
+                        <h3 style="margin-bottom: 1rem;">Financial Inclusion Technology</h3>
+                        <div class="visual-stats">
+                            <div class="stat-item">
+                                <h4>100%</h4>
+                                <p>NPCI Compliant</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>All Banks</h4>
+                                <p>Multi-Bank Support</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Instant</h4>
+                                <p>Real-Time Processing</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Secure</h4>
+                                <p>Aadhaar Based</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution 4: API & Licence-based Solutions -->
+        <section class="solution-section">
+            <div class="container">
+                <div class="solution-content reverse">
+                    <div class="solution-text">
+                        <h2>API & Licence-Based Payment Solutions</h2>
+                        <p>Developer-friendly payment APIs for seamless integration. Get access to payment gateway APIs, payout APIs, AEPS APIs, and more with comprehensive documentation, sandbox environment, and dedicated technical support.</p>
+                        
+                        <div class="solution-features">
+                            <h3>Available APIs</h3>
+                            <ul>
+                                <li>Payment Gateway API for accepting online payments</li>
+                                <li>Payout API for bulk disbursements and settlements</li>
+                                <li>AEPS API for Aadhaar-based banking services</li>
+                                <li>UPI Collection and Payout APIs</li>
+                                <li>Wallet and Virtual Account APIs</li>
+                                <li>QR Code generation and payment APIs</li>
+                            </ul>
+                        </div>
+
+                        <div class="api-preview">
+<code>POST</code> https://api.flowmintechnology.in/v1/payment
+{
+  "amount": 1000,
+  "currency": "INR",
+  "payment_method": "upi",
+  "customer": {
+    "name": "John Doe",
+    "email": "john@example.com"
+  }
+}
+                        </div>
+
+                        <div class="solution-features">
+                            <h3>Developer Experience</h3>
+                            <ul>
+                                <li>RESTful APIs with JSON responses</li>
+                                <li>Comprehensive documentation with code examples</li>
+                                <li>Sandbox environment for testing before going live</li>
+                                <li>Webhooks for real-time event notifications</li>
+                                <li>SDKs for popular programming languages</li>
+                                <li>Dedicated technical support for integration queries</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-cta">
+                            <a href="#contact" class="cta-btn">Get API Credentials</a>
+                            <a href="#contact" class="cta-btn cta-secondary">View API Documentation</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-visual">
+                        <div class="visual-icon">🔌</div>
+                        <h3 style="margin-bottom: 1rem;">Built for Developers</h3>
+                        <p style="margin-bottom: 1rem; color: var(--gray);">Everything you need to integrate fast:</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ RESTful API Architecture</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Detailed API Documentation</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Sandbox Environment</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Postman Collections</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Code Examples (PHP, Node, Python)</li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--light);">✓ Webhook Integration</li>
+                            <li style="padding: 0.5rem 0;">✓ Live Integration Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution 5: White-label Dashboards & Portals -->
+        <section class="solution-section">
+            <div class="container">
+                <div class="solution-content">
+                    <div class="solution-text">
+                        <h2>White-Label Dashboards & Reseller Portals</h2>
+                        <p>Complete admin and reseller management system for building multi-tier distribution networks. Manage partners, configure commissions, track performance, and scale your fintech business with hierarchical access control.</p>
+                        
+                        <div class="solution-features">
+                            <h3>Admin Panel Features</h3>
+                            <ul>
+                                <li>Complete platform control and configuration</li>
+                                <li>User and role-based access management</li>
+                                <li>Real-time transaction monitoring and analytics</li>
+                                <li>Settlement and reconciliation management</li>
+                                <li>Support ticket and dispute management system</li>
+                                <li>Custom reporting and data export tools</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-features">
+                            <h3>Partner & Reseller Management</h3>
+                            <ul>
+                                <li>Multi-level partner hierarchy (distributor, retailer, agent)</li>
+                                <li>Flexible commission structure configuration</li>
+                                <li>Automated commission calculation and payout</li>
+                                <li>Individual partner dashboards with limited access</li>
+                                <li>Performance tracking and leaderboards</li>
+                                <li>White-label branding for each partner tier</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-features">
+                            <h3>Perfect For</h3>
+                            <ul>
+                                <li>Payment distributors building channel partner networks</li>
+                                <li>Fintech companies offering reseller programs</li>
+                                <li>Software companies adding payment services</li>
+                                <li>NBFCs creating agent networks for collections</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution-cta">
+                            <a href="#contact" class="cta-btn">Request Dashboard Demo</a>
+                            <a href="#contact" class="cta-btn cta-secondary">Discuss Reseller Program</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-visual">
+                        <div class="visual-icon">📊</div>
+                        <h3 style="margin-bottom: 1rem;">Complete Management Suite</h3>
+                        <div class="visual-stats">
+                            <div class="stat-item">
+                                <h4>Multi-Tier</h4>
+                                <p>Partner Hierarchy</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Automated</h4>
+                                <p>Commission System</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Real-Time</h4>
+                                <p>Analytics</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>Role-Based</h4>
+                                <p>Access Control</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section" id="contact">
+            <div class="container animate-on-scroll">
+                <h2>Ready to Build Your Fintech Product?</h2>
+                <p>Let's discuss your requirements and find the right solution for your business. Our team is ready to help you launch faster with proven infrastructure.</p>
+                
+                <div class="solution-cta" style="justify-content: center;">
+                    <a href="mailto:info@flowmintechnology.in" class="cta-btn">Request a Solution Overview</a>
+                    <a href="tel:+911234567890" class="cta-btn cta-secondary">Talk to Our Team</a>
+                    <a href="#" class="cta-btn cta-secondary">Schedule a Demo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Flowmin Technology</h4>
+                    <p>Leading payment gateway and fintech solution provider serving businesses across India and globally.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#payment-gateway">Payment Gateway</a></li>
+                        <li><a href="#white-label">White-Label PG</a></li>
+                        <li><a href="#aeps">AEPS Services</a></li>
+                        <li><a href="#api">API Solutions</a></li>
+                        <li><a href="#dashboards">Dashboards & Portals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/Legal/complince.html">Compliance & Security</a></li>
+                        <li><a href="/Legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/Legal/terms & conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@flowmintechnology.in</p>
+                    <p>Website: FlowminTechnology.in</p>
+                    <p>Location: India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flowmin Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate solution sections on scroll
+        const solutionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.solution-text, .solution-visual').forEach((el, index) => {
+                        setTimeout(() => {
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateX(0) translateY(0)';
+                        }, index * 200);
+                    });
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.solution-section').forEach(section => {
+            solutionObserver.observe(section);
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-item h4');
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                if (target.includes('%') || target.includes('+')) {
+                    const num = parseInt(target);
+                    if (!isNaN(num)) {
+                        let current = 0;
+                        const increment = num / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= num) {
+                                counter.textContent = target;
+                                clearInterval(timer);
+                            } else {
+                                counter.textContent = Math.floor(current) + (target.includes('%') ? '%' : '+');
+                            }
+                        }, 30);
+                    }
+                }
+            });
+        };
+
+        // Trigger counter animation when stats are visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.visual-stats').forEach(stats => {
+            statsObserver.observe(stats);
+        });
+
+        // Add hover effect to feature badges
+        document.querySelectorAll('.feature-badge').forEach(badge => {
+            badge.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+                this.style.transition = 'transform 0.3s';
+            });
+            badge.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Parallax effect for solution visuals
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.solution-visual').forEach(visual => {
+                const rect = visual.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const offset = (rect.top - window.innerHeight / 2) * 0.05;
+                    visual.style.transform = `translateY(${offset}px)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

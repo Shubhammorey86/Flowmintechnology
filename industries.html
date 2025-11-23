@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flowmin Technology serves payment gateway companies, fintech startups, NBFCs, POS companies, and reseller networks with white-label payment solutions and APIs.">
+    <meta name="keywords" content="payment gateway for fintech, white label payment solution, AEPS for NBFCs, payment API for startups, fintech infrastructure provider, payment reseller program">
+    <meta name="author" content="Flowmin Technology">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Industries We Serve - Flowmin Technology">
+    <meta property="og:description" content="Powering payment gateway companies, fintech startups, NBFCs, and reseller networks with proven payment infrastructure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://flowmintechnology.in/industries">
+    <link rel="canonical" href="https://flowmintechnology.in/industries">
+    <title>Industries We Serve - Payment Solutions for Fintech & NBFCs | Flowmin Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --white: #ffffff;
+            --accent: #8b5cf6;
+            --orange: #f97316;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Industries Intro */
+        .industries-intro {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .industries-intro h2 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .industries-intro p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            line-height: 1.8;
+        }
+
+        /* Industry Cards Grid */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 60px 0;
+        }
+
+        .industry-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .industry-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .industry-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .industry-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .industry-card:hover .industry-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .industry-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .industry-challenge {
+            background: #fef3c7;
+            border-left: 3px solid var(--orange);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+
+        .industry-challenge strong {
+            color: var(--orange);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .industry-solution {
+            background: #d1fae5;
+            border-left: 3px solid var(--secondary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+
+        .industry-solution strong {
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .industry-card p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .industry-cta {
+            margin-top: 1.5rem;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 0.6rem 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .cta-secondary:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Partnership Section */
+        .partnership-section {
+            background: var(--light);
+            padding: 80px 0;
+        }
+
+        .partnership-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .partnership-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .partnership-content > p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .partnership-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary), #059669);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .benefit-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .final-cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .final-cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: var(--gray);
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .industries-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partnership-benefits {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Flowmin Technology</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="industries.html" class="active">Industries</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <a href="Contact.html" class="cta-btn">Get Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container page-header-content">
+                <h1>Powering Payment Innovation Across Industries</h1>
+                <p>From payment gateway companies to fintech startups, NBFCs to reseller networks — we provide the technology infrastructure that helps businesses launch, scale, and succeed in the payments ecosystem.</p>
+            </div>
+        </section>
+
+        <!-- Industries Intro -->
+        <section class="industries-intro">
+            <div class="container">
+                <h2>Built for Businesses Ready to Move Fast</h2>
+                <p>Flowmin Technology is purpose-built for companies that want to launch, scale, or resell payment and AEPS solutions without the complexity of building everything from scratch. Whether you're a fintech startup racing to market, an NBFC adding payment capabilities, or a reseller building distribution networks — we provide the proven infrastructure, APIs, and support you need to succeed.</p>
+                <p>Our solutions help you reduce time to market, eliminate technical overhead, ensure compliance, and focus on what matters most: growing your business and serving your customers.</p>
+            </div>
+        </section>
+
+        <!-- Industries Grid -->
+        <section>
+            <div class="container">
+                <div class="industries-grid">
+                    <!-- Payment Gateway Companies -->
+                    <div class="industry-card animate-on-scroll">
+                        <div class="industry-icon">💳</div>
+                        <h3>Payment Gateway & PG Aggregators</h3>
+                        <p>Established payment gateway companies looking to expand capabilities, add new payment methods, or scale infrastructure.</p>
+                        
+                        <div class="industry-challenge">
+                            <strong>Common Challenges:</strong>
+                            Managing multi-bank integrations, ensuring 99.9% uptime, handling compliance updates, and scaling infrastructure during peak loads without massive capex investment.
+                        </div>
+                        
+                        <div class="industry-solution">
+                            <strong>How We Help:</strong>
+                            Ready payment routing infrastructure, multi-bank connectivity, automated reconciliation, and white-label options to expand your service portfolio under your brand.
+                        </div>
+                        
+                        <div class="industry-cta">
+                            <a href="#contact" class="cta-btn cta-secondary">Discuss Your Requirements</a>
+                        </div>
+                    </div>
+
+                    <!-- POS/QR/Device Companies -->
+                    <div class="industry-card animate-on-scroll">
+                        <div class="industry-icon">📱</div>
+                        <h3>POS / QR Code / Payment Device Companies</h3>
+                        <p>Hardware providers, mPOS companies, and QR solution providers needing robust backend payment processing capabilities.</p>
+                        
+                        <div class="industry-challenge">
+                            <strong>Common Challenges:</strong>
+                            Building payment backend from scratch, integrating with multiple banks and switches, managing settlement flows, and ensuring device-to-server security and reliability.
+                        </div>
+                        
+                        <div class="industry-solution">
+                            <strong>How We Help:</strong>
+                            Complete payment gateway APIs, device integration SDKs, AEPS capabilities for micro-ATM devices, real-time transaction processing, and dedicated technical support for hardware-software integration.
+                        </div>
+                        
+                        <div class="industry-cta">
+                            <a href="#contact" class="cta-btn cta-secondary">Explore Integration Options</a>
+                        </div>
+                    </div>
+
+                    <!-- Fintech Startups -->
+                    <div class="industry-card animate-on-scroll">
+                        <div class="industry-icon">🚀</div>
+                        <h3>Fintech Startups & Payment Innovators</h3>
+                        <p>New-age fintech companies building digital wallets, neo-banks, payment apps, or innovative payment solutions.</p>
+                        
+                        <div class="industry-challenge">
+                            <strong>Common Challenges:</strong>
+                            Limited development resources, need for fast time-to-market, navigating RBI compliance, securing banking partnerships, and avoiding massive upfront infrastructure costs.
+                        </div>
+                        
+                        <div class="industry-solution">
+                            <strong>How We Help:</strong>
+                            White-label payment infrastructure ready in weeks, not months. Pre-integrated banking partners, compliance-ready setup, developer-friendly APIs, sandbox environment, and startup-friendly pricing to preserve your runway.
+                        </div>
+                        
+                        <div class="industry-cta">
+                            <a href="#contact" class="cta-btn cta-secondary">Launch Your Payment Product</a>
+                        </div>
+                    </div>
+
+                    <!-- NBFCs & Lending -->
+                    <div class="industry-card animate-on-scroll">
+                        <div class="industry-icon">🏦</div>
+                        <h3>NBFCs & Digital Lending Platforms</h3>
+                        <p>Non-banking financial companies and lending platforms requiring payment collection, disbursement, and AEPS capabilities.</p>
+                        
+                        <div class="industry-challenge">
+                            <strong>Common Challenges:</strong>
+                            Managing loan disbursements, collecting EMIs efficiently, reconciling payments across multiple channels, and enabling agents to collect cash or process Aadhaar-based transactions in rural areas.
+                        </div>
+                        
+                        <div class="industry-solution">
+                            <strong>How We Help:</strong>
+                            Payout APIs for instant loan disbursement, payment collection infrastructure, AEPS services for agent-assisted collections, automated reconciliation, and comprehensive reporting for audit compliance.
+                        </div>
+                        
+                        <div class="industry-cta">
+                            <a href="#contact" class="cta-btn cta-secondary">Streamline Your Collections</a>
+                        </div>
+                    </div>
+
+                    <!-- Agent Networks & Resellers -->
+                    <div class="industry-card animate-on-scroll">
+                        <div class="industry-icon">🤝</div>
+                        <h3>Agent Networks, DSAs & Distributors</h3>
+                        <p>Established distributor networks, direct selling agents, and channel partners looking to offer payment services to their network.</p>
+                        
+                        <div class="industry-challenge">
+                            <strong>Common Challenges:</strong>
+                            Finding reliable payment technology partners, managing multi-tier commission structures, onboarding and training agents at scale, and providing real-time reporting to the entire network.
+                        </div>
+                        
+                        <div class="industry-solution">
+                            <strong>How We Help:</strong>
+                            White-label reseller portals with multi-level hierarchy, automated commission calculation and payouts, individual agent dashboards, training materials, and dedicated support to help your network succeed.
+                        </div>
+                        
+                        <div class="industry-cta">
+                            <a href="#contact" class="cta-btn cta-secondary">Build Your Payment Network</a>
+                        </div>
+                    </div>
+
+                    <!-- SaaS Companies -->
+                    <div class="industry-card animate-on-scroll">
+                        <div class="industry-icon">💻</div>
+                        <h3>SaaS Founders & Software Companies</h3>
+                        <p>B2B SaaS platforms, ERP providers, and software companies wanting to embed payment capabilities into their existing products.</p>
+                        
+                        <div class="industry-challenge">
+                            <strong>Common Challenges:</strong>
+                            Payment integration complexity distracting from core product development, managing PCI compliance, handling multiple payment methods, and monetizing payment features without becoming a payment company.
+                        </div>
+                        
+                        <div class="industry-solution">
+                            <strong>How We Help:</strong>
+                            Simple API integration that takes days not months, white-label payment gateway to match your brand, revenue sharing opportunities, and we handle all compliance, security, and settlement operations.
+                        </div>
+                        
+                        <div class="industry-cta">
+                            <a href="#contact" class="cta-btn cta-secondary">Add Payments to Your Platform</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <h2 style="margin-bottom: 1rem;">Trusted Across Industries</h2>
+                <p style="max-width: 700px; margin: 0 auto 2rem; opacity: 0.9;">Our infrastructure powers diverse businesses across the payments ecosystem</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>6+</h3>
+                        <p>Industry Verticals Served</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>99.9%</h3>
+                        <p>Platform Uptime</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Technical Support</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Fast</h3>
+                        <p>Go-Live Timeline</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Section -->
+        <section class="partnership-section">
+            <div class="container partnership-content animate-on-scroll">
+                <h2>Why Partner with Flowmin Technology</h2>
+                <p>We understand that every business has unique requirements, timelines, and commercial expectations. That's why we offer flexible partnership models designed to help you succeed.</p>
+                
+                <div class="partnership-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💼</div>
+                        <h4>Flexible Commercial Arrangements</h4>
+                        <p>Revenue sharing, licensing, or white-label models tailored to your business goals. We structure deals that work for startups to enterprises.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <h4>Fast Onboarding Process</h4>
+                        <p>Go live in weeks with our streamlined onboarding. Technical documentation, sandbox access, and integration support from day one.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">👤</div>
+                        <h4>Dedicated Relationship Manager</h4>
+                        <p>Every partner gets a dedicated account manager who understands your business and ensures smooth operations and timely support.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📈</div>
+                        <h4>Reseller & Distributor Support</h4>
+                        <p>Complete partner enablement with training materials, marketing collateral, technical documentation, and ongoing business development assistance.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🛡️</div>
+                        <h4>Compliance & Security Handled</h4>
+                        <p>We manage PCI-DSS compliance, data security, RBI guidelines, and NPCI certifications so you can focus on business growth.</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔧</div>
+                        <h4>Continuous Product Evolution</h4>
+                        <p>Regular feature updates, new payment methods, performance improvements, and technology upgrades at no additional cost to you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta-section" id="contact">
+            <div class="container">
+                <h2 class="animate-on-scroll">Ready to Transform Your Payment Operations?</h2>
+                <p class="animate-on-scroll">Whether you're launching a new payment product, scaling existing operations, or building a reseller network — let's discuss how Flowmin Technology can accelerate your success.</p>
+                
+                <div class="cta-buttons animate-on-scroll">
+                    <a href="mailto:info@flowmintechnology.in" class="cta-btn">Schedule a Consultation</a>
+                    <a href="tel:+911234567890" class="cta-btn cta-secondary" style="background: white; color: var(--primary);">Call Us Now</a>
+                    <a href="solutions.html" class="cta-btn cta-secondary" style="background: transparent; border: 2px solid white;">Explore Solutions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Flowmin Technology</h4>
+                    <p>Leading payment gateway and fintech solution provider serving businesses across India and globally.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="solutions.html#payment-gateway">Payment Gateway</a></li>
+                        <li><a href="solutions.html#white-label">White-Label PG</a></li>
+                        <li><a href="solutions.html#aeps">AEPS Services</a></li>
+                        <li><a href="solutions.html#api">API Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/Legal/complince.html">Compliance & Security</a></li>
+                        <li><a href="/Legal/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/Legal/terms & conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>   
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@flowmintechnology.in</p>
+                    <p>Website: FlowminTechnology.in</p>
+                    <p>India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Flowmin Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Stagger animation for industry cards
+        const cards = document.querySelectorAll('.industry-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Header shadow on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-item h3');
+            const options = {
+                threshold: 0.5
+            };
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = counter.textContent;
+                        
+                        // Only animate numeric values
+                        if (target.includes('%') || target.includes('+')) {
+                            const num = parseFloat(target);
+                            if (!isNaN(num)) {
+                                let current = 0;
+                                const increment = num / 50;
+                                const timer = setInterval(() => {
+                                    current += increment;
+                                    if (current >= num) {
+                                        counter.textContent = target;
+                                        clearInterval(timer);
+                                    } else {
+                                        const suffix = target.includes('%') ? '%' : '+';
+                                        counter.textContent = Math.floor(current) + suffix;
+                                    }
+                                }, 30);
+                            }
+                        }
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, options);
+
+            counters.forEach(counter => {
+                counterObserver.observe(counter);
+            });
+        };
+
+        animateCounters();
+
+        // Add hover effects to benefit items
+        document.querySelectorAll('.benefit-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.querySelector('.benefit-icon').style.transform = 'scale(1.1) rotate(5deg)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.querySelector('.benefit-icon').style.transform = 'scale(1) rotate(0)';
+            });
+        });
+
+        // Parallax effect for page header
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.page-header');
+            if (header) {
+                header.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add pulse animation to CTA buttons on scroll
+        const ctaObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.cta-btn').forEach((btn, index) => {
+                        setTimeout(() => {
+                            btn.style.animation = 'pulse 1s ease-in-out';
+                        }, index * 200);
+                    });
+                    ctaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const ctaSection = document.querySelector('.final-cta-section');
+        if (ctaSection) {
+            ctaObserver.observe(ctaSection);
+        }
+
+        // Add dynamic icon rotation on card hover
+        document.querySelectorAll('.industry-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.industry-icon');
+                icon.style.transition = 'transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+            });
+        });
+
+        // Smooth reveal for partnership benefits
+        const benefitsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const benefits = entry.target.querySelectorAll('.benefit-item');
+                    benefits.forEach((benefit, index) => {
+                        setTimeout(() => {
+                            benefit.style.opacity = '1';
+                            benefit.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                    benefitsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        const benefitsGrid = document.querySelector('.partnership-benefits');
+        if (benefitsGrid) {
+            benefitsGrid.querySelectorAll('.benefit-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'all 0.5s ease';
+            });
+            benefitsObserver.observe(benefitsGrid);
+        }
+    </script>
+</body>
+</html>
